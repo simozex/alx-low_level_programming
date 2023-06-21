@@ -1,3 +1,4 @@
+#include <stdio.h>
 /**  
  *  main - ezazae
  *  Return: 0 if it
