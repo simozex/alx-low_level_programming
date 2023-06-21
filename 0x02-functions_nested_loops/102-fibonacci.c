@@ -1,11 +1,12 @@
 #include <stdio.h>
-/**  
+/**
  *  main - ezazae
  *  Return: 0 if it
  */
 int main(void)
 {
 	int k;
+	
 	for (k = 2; k < 52; k++)
 	{
 		int i;
