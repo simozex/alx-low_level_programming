@@ -6,7 +6,6 @@
 int main(void)
 {
 	int k;
-
 	for (k = 2; k < 52; k++)
 	{
 		int i;
