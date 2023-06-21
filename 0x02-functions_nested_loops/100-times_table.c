@@ -1,10 +1,9 @@
 #include "main.h"
 #include <stdio.h>
 /**
- *  
  *  print_times_table - hieheieei
  *  @n: is amonster
- *  */
+ */
 void print_times_table(int n)
 {
 	int i, j;
