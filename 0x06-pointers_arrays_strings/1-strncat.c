@@ -1,14 +1,12 @@
 #include "main.h"
 
 /**
- *  * *_strncat -> Appends Selected Number Elements src string to the dest string
- *   *
- *    * @dest: Destination Input
- *     * @src: Source Input
- *      * @n: Number Elements
- *       *
- *        * Return: Destination
- *         */
+*_strncat -> Appends Selected Number Elements src string to the dest string
+* @dest: Destination Input
+* @src: Source Input
+* @n: Number Elements
+* Return: Destination
+*/
 
 char *_strncat(char *dest, char *src, int n)
 {
