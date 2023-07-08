@@ -1,17 +1,30 @@
 #include <stdio.h>
+#include "main.h"
+#include <stdlib.h>
 
 /**
-* main - prints the number of arguments passed into it.
-* @argc: number of command-line arguments passed to the program
-* @argv: an array of pointers to strings contain the arguments
-* Return: 0 its successful implementation
-*/
-
-int main(int argc, char **argv __attribute__((unused)))
+ * main - Specify the return type (integer)
+ * @argc: input arguments
+ * @argv: character pointers
+ * Return: 0 The program has been implemented successfully.
+ */
+int main(int argc, char *argv[])
 {
-	int i;
+	int first;
+	int second;
+	int res;
 
-	for (i = 0; i < argc ; i++)
-		printf("%s\n", argv[i]);
+	if (argc > 2)
+	{
+		first = atoi(argv[1]);
+		second = atoi(argv[2]);
+		res = first * second;
+		printf("%d\n", res);
+	}
+	else
+	{
+		printf("Error\n");
+		return (1);
+	}
 	return (0);
 }
