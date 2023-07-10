@@ -3,10 +3,10 @@
 #include<stdlib.h>
 
 /**
-* _strdup - returns copy of the string given as a parameter
-* @str: string given
-* Return: the copy or null
-*/
+ * _strdup - returns copy of the string given as a parameter
+ * @str: string given
+ * Return: the copy or null
+ */
 
 char *_strdup(char *str)
 {
@@ -28,5 +28,5 @@ char *_strdup(char *str)
 		New[y] = str[y];
 		y++;
 	}
-	return (New)
+	return (New);
 }
