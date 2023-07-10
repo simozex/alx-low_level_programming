@@ -14,6 +14,7 @@ int _words(char *str)
 
 	i = 0;
 	si = 0;
+
 	for (j = 0; str[j] != '\0'; j++)
 	{
 		if (str[j] == ' ')
