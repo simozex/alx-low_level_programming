@@ -4,7 +4,6 @@
 /**
  * _words - counts the number of words in a string (str).
  * @str: the Input String
- *
  * Return: The number of words in the string
  */
 
