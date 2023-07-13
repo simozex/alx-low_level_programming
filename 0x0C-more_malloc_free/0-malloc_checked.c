@@ -2,15 +2,19 @@
 #include <stdlib.h>
 
 /**
-* *malloc_checked - Write a function that allocates memory using malloc
-* @b: int
-* Return: pointer to the allocated memory
-*/
-void *malloc_checked(unsigned int b)
-{
-	int *d = malloc(b);
+ * malloc_checked - Allocate memory dynamically using malloc
+ * @a: The function takes one input argument
+ * Return: A pointer pointed to an empty type.
+ */
 
-	if (d == 0)
+void *malloc_checked(unsigned int a)
+{
+	int *p;
+
+	p = (void *)malloc(a);
+	if (p == NULL)
+	{
 		exit(98);
-	return (d);
+	}
+	return (p);
 }
