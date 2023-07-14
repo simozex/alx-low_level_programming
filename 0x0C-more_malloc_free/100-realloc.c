@@ -1,31 +1,49 @@
 #include "main.h"
 #include <stdlib.h>
-
 /**
- * array_range - Creates an array of integers containing all values from
- * min to max ordered from min to max
- * @min: The minimum value in the range
- * @max: The maximum value in the range
- * Return: A pointer to the newly created array, or NULL if
- * the allocation fails or min > max
+ * _realloc - reallocates a memory block using malloc and free
+ * @ptr: pointer to the memory previously allocated with malloc
+ * @old_size: size of the allocated space for ptr
+ * @new_size: size of the new memory block to be allocated
+ * Return: pointer to the new memory block, or NULL if allocation fails
  */
-int *array_range(int min, int max)
+
+void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-	int size, i;
-	int *ptr;
+	char *ptr1;
+	char *old_ptr;
+	unsigned int i;
 
-	if (min > max)
+	if (new_size == old_size)
+		return (ptr);
+
+	if (new_size == 0 && ptr)
+	{
+		free(ptr);
+		return (NULL);
+	}
+
+	if (!ptr)
+		return (malloc(new_size));
+
+	ptr1 = malloc(new_size);
+	if (!ptr1)
 		return (NULL);
 
-	size = max - min + 1;
+	old_ptr = ptr;
 
-	ptr = malloc(sizeof(int) * size);
+	if (new_size < old_size)
+	{
+		for (i = 0; i < new_size; i++)
+			ptr1[i] = old_ptr[i];
+	}
 
-	if (ptr == NULL)
-		return (NULL);
+	if (new_size > old_size)
+	{
+		for (i = 0; i < old_size; i++)
+			ptr1[i] = old_ptr[i];
+	}
 
-	for (i = 0; min <= max; i++)
-		ptr[i] = min++;
-
-	return (ptr);
+	free(ptr);
+	return (ptr1);
 }
