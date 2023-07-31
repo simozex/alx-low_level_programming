@@ -1,32 +1,17 @@
-#include "lists.h"
+#include <stdio.h>
+#include "dog.h"
 
+/**
+ * main - check the code
+ * Return: Always 0.
+ */
 int main(void)
 {
-    list_t *head;
-    list_t *new;
-    list_t hello = {"World", 5, NULL};
-    size_t n;
+    struct dog my_dog;
 
-    head = &hello;
-    new = malloc(sizeof(list_t));
-    if (new == NULL)
-    {
-        printf("Error\n");
-        return (1);
-    }
-    new->str = strdup("Hello");
-    new->len = 5;
-    new->next = head;
-    head = new;
-    n = print_list(head);
-    printf("-> %lu elements\n", n);
-
-    printf("\n");
-    free(new->str);
-    new->str = NULL;
-    n = print_list(head);
-    printf("-> %lu elements\n", n);
-
-    free(new);
+    my_dog.name = "Poppy";
+    my_dog.age = 3.5;
+    my_dog.owner = "Bob";
+    printf("My name is %s, and I am %.1f :) - Woof!\n", my_dog.name, my_dog.age);
     return (0);
 }
